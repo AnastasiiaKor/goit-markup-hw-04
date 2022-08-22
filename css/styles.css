@@ -137,10 +137,15 @@ ul {
 .title {
   text-align: center;
 }
-.hero {
-  background-color: var(--footer-backgroung-color);
-}
 
+.overlay {
+  max-width: 1600px;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .hero.section {
   display: flex;
   flex-direction: column;
@@ -188,13 +193,7 @@ ul {
   color: var(--title-color);
   background-color: #f5f4fa;
 }
-.sorter .button:hover,
-.sorter .button:focus {
-  color: var(--main-background-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+
 .button,
 .hero-button {
   cursor: pointer;
@@ -233,6 +232,7 @@ ul {
 }
 
 .box .subtitle {
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 .box {
@@ -252,7 +252,28 @@ ul {
 .team .title {
   margin-bottom: 50px;
 }
+.advantages .box:before {
+  content: '';
+  display: block;
+  height: 120px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+.icon-antenna:before {
+  background-image: url(../images/icons/antenna\ 1.svg);
+}
+.icon-clock:before {
+  background-image: url(../images/icons/clock\ 1.svg);
+}
+.icon-diagram:before {
+  background-image: url(../images/icons/diagram\ 1.svg);
+}
+.icon-astronaut:before {
+  background-image: url(../images/icons/astronaut\ 1.svg);
+}
 .team .list {
   display: flex;
   margin-left: calc(-1 * var(--list-gap));
@@ -306,6 +327,14 @@ ul {
   text-align: center;
   border: none;
 }
+.sorter .button:hover,
+.sorter .button:focus {
+  color: var(--main-background-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .sorter .item:not(:last-child) {
   margin-right: 8px;
 }
@@ -319,6 +348,13 @@ ul {
   margin-top: var(--list-gap);
   margin-left: var(--list-gap);
   flex-basis: calc(100% / 3 - var(--list-gap));
+  border: 1px solid #eeeeee;
+}
+
+.example-item:hover,
+.example-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .work-example .text {
