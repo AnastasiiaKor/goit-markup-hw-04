@@ -98,6 +98,8 @@ ul {
 }
 .contacts-nav .link {
   color: inherit;
+  display: flex;
+  align-items: center;
 }
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
@@ -124,9 +126,12 @@ ul {
   fill: var(--main-color);
   margin-right: 10px;
 }
-.envelope:focus,
-.envelope:hover {
-  fill: var(--accent-color);
+
+.contacts-nav .link:hover .envelope {
+  fill: currentColor;
+}
+.contacts-nav .link:focus .envelope {
+  fill: currentColor;
 }
 /* main styles */
 .visually-hidden {
@@ -331,10 +336,6 @@ ul {
   fill: #afb1b8;
 }
 
-.clients-logo:hover,
-.clients-logo:focus {
-  fill: var(--accent-color);
-}
 .clients-list .link {
   display: block;
   width: 170px;
@@ -349,6 +350,14 @@ ul {
 .clients-list .link:focus {
   border: 1px solid var(--accent-color);
 }
+
+.clients-list .link:hover .clients-logo {
+  fill: var(--accent-color);
+}
+.clients-list .link:focus .clients-logo {
+  fill: var(--accent-color);
+}
+
 .sorter {
   margin-left: auto;
   margin-right: auto;
