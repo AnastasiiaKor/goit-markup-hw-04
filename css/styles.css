@@ -122,15 +122,18 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.envelope {
+.envelope,
+.phone {
   fill: var(--main-color);
   margin-right: 10px;
 }
 
-.contacts-nav .link:hover .envelope {
+.contacts-nav .link:hover .envelope,
+.contacts-nav .link:hover .phone {
   fill: currentColor;
 }
-.contacts-nav .link:focus .envelope {
+.contacts-nav .link:focus .envelope,
+.contacts-nav .link:focus .phone {
   fill: currentColor;
 }
 /* main styles */
@@ -310,6 +313,8 @@ ul {
 .about {
   padding-top: var(--list-gap);
   padding-bottom: var(--list-gap);
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .team .subtitle {
   font-weight: 500;
@@ -322,7 +327,42 @@ ul {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 16px;
 }
+.about .list.social-links {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.social-links .link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links > .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links-logo {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
+  background-color: var(--accent-color);
+}
+.social-links .link:hover .social-links-logo,
+.social-links .link:focus .social-links-logo {
+  fill: var(--main-background-color);
+}
+
 .clients-list {
   display: flex;
   gap: var(--list-gap);
@@ -336,7 +376,7 @@ ul {
   fill: #afb1b8;
 }
 
-.clients-list .link {
+.clients .link {
   display: block;
   width: 170px;
   height: 92px;
@@ -480,4 +520,30 @@ ul {
 .contact {
   font-size: 14px;
   line-height: 1.71;
+}
+
+.page-footer .container {
+  display: flex;
+  align-items: baseline;
+}
+.join-us {
+  margin-left: 70px;
+}
+.join-us-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.join-us .social-links {
+  display: flex;
+}
+.join-us .link {
+  background: rgba(255, 255, 255, 0.1);
+}
+.join-us .social-links-logo {
+  fill: var(--main-background-color);
 }
